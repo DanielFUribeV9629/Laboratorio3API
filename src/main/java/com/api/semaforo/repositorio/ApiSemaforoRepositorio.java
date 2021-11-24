@@ -1,0 +1,15 @@
+package com.api.semaforo.repositorio;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.api.semaforo.modelo.SemaforoInfo;
+
+@Repository
+public interface ApiSemaforoRepositorio extends JpaRepository<SemaforoInfo, Integer>{
+	
+	public List<SemaforoInfo> findByServerId(int id);
+	
+}
